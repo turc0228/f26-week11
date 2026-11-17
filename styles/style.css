@@ -1,0 +1,191 @@
+/* ai prompt to add meyerweb cssrest:
+In the css, add the full text of the meyerweb cssreset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/********************
+   DEFAULT STYLES
+********************/
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: bisque;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: bottom;
+    padding: 10px;
+    border-bottom: 1px solid darkblue;
+}
+
+article div {
+    background-color: cornflowerblue;
+    border: 2px solid darkblue;
+    font-size: 32px;
+    font-weight: bold;
+
+    /* flexbox can be used inside the grid */
+    display: flex;
+
+    /* centers horizontally */
+    justify-content: center;
+    /* centers vertically */
+    align-items: center;
+}
+
+/*******************
+    GRID STYLES
+*******************/
+
+section.one article {
+    /* like flexbox, you have to declare a parent element to hold the grid... */
+    display: grid;
+
+    /* fr stands for fraction - it tells the column or row to take up a portion of the available space */
+    grid-template-columns: 200px 2fr 1fr;
+
+    /* the explicit grid is what you define, the implicit grid is what the browser figures out based on content that spills outside of your defined explicit grid
+    in the template below, the third row won't have an height */
+    grid-template-rows: 120px 120px;
+}
