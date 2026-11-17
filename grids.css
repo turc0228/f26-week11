@@ -189,3 +189,67 @@ section.one article {
     in the template below, the third row won't have an height */
     grid-template-rows: 120px 120px;
 }
+
+section.two article {
+    display: grid;
+
+    /* repeat lets you define any number of rows/columns to take up the same amount of space */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* grid-auto-rows tells all rows to be this size */
+    grid-auto-rows: 120px;
+
+    /* tell the grid to fill in spaces left by a cell that doesn't fit */
+    grid-auto-flow: dense;
+}
+
+/* you can control the individual cells - or the children of the grid - to position or size them individually */
+section.two div:nth-child(1) {
+    color: orange;
+
+    /* you can tell one of your cells to start at a row or column, and end at a row or column */
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+section.two div:nth-child(2) {
+    color: lightgreen;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+section.two div:nth-child(6) {
+    grid-column-start: 1;
+    /* you can use span to say how many columns or rows to stretch across */
+    grid-column-end: span 4;
+}
+
+section.three article {
+    display: grid;
+    grid-auto-flow: dense;
+
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: 120px;
+}
+
+section.three div:nth-child(2) {
+    /* by default everything has an order value of 0, anything with a higher order comes later, anything with a lower order comes earlier */
+    order: 1;
+}
+
+section.three div:nth-child(5){
+    /* you can use a shorthand for start and end */
+    grid-area: 1 / 2 / span 2 / span 2;
+    /* this is equivalent to writing:
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: span 2;
+    grid-row-end: span 2; */
+}
